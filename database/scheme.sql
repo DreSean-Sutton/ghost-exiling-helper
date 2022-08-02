@@ -7,8 +7,6 @@ CREATE TABLE "public.first_names" (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "public.ghosts" (
 	"ghost_id" serial NOT NULL,
 	"name" TEXT NOT NULL UNIQUE,
@@ -18,8 +16,6 @@ CREATE TABLE "public.ghosts" (
 ) WITH (
   OIDS=FALSE
 );
-
-
 
 CREATE TABLE "public.evidence" (
 	"ghost_id" int NOT NULL,
@@ -31,8 +27,6 @@ CREATE TABLE "public.evidence" (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "public.last_names" (
 	"last_name_id" serial NOT NULL,
 	"last_name" serial NOT NULL,
@@ -41,8 +35,6 @@ CREATE TABLE "public.last_names" (
 ) WITH (
   OIDS=FALSE
 );
-
-
 
 CREATE TABLE "public.rites" (
 	"rite_id" serial NOT NULL,
@@ -55,8 +47,6 @@ CREATE TABLE "public.rites" (
   OIDS=FALSE
 );
 
-
-
 CREATE TABLE "public.sigils" (
 	"sigil_id" serial NOT NULL,
 	"rite_id" int,
@@ -67,8 +57,6 @@ CREATE TABLE "public.sigils" (
 ) WITH (
   OIDS=FALSE
 );
-
-
 
 CREATE TABLE "public.items" (
 	"item_id" serial NOT NULL,
