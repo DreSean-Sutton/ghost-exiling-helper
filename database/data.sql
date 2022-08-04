@@ -43,3 +43,37 @@ VALUES
   ('Revenant', 'The Revenant is one of the most dangerous ghosts. They are relatively calm if you don''t agitate them and is often difficult to identify. Once they start hunting, very little will stop him.'),
   ('Shiryo', 'The Shiryo will do the best to show you that you don''t have long to live. They are known to be extremely aggressive.'),
   ('Shinigami', 'The Shinigami are drawn towards death, and they''re always near places of death.');
+
+INSERT INTO public.items (
+  "name", "description", "price",
+  "primary_button", "secondary_button"
+  "placeable", "max_can_add"
+)
+VALUES
+  ('EMF Detector', '', , 'Turn on / off', null, null, 1),
+  ('Voice Recorder', '', , 'Turn on / off recording', 'Turn on / off playback', null, 1),
+  ('Zonal EMF Detector', '', , null, 'Turn on / off', null, 2),
+  ('Sound Sensor', '', , null, null, 'place', 2),
+  ('Motion/Infrared Sensor', '', , null, null, 'place', 2),
+  ('Salt', '', , null, 'Place', null, 3),
+  ('Crucifix', '', , null, null, null, 2),
+  ('Sanity Pills', '', , null, 'Consume pills', null, 4),
+  ('Candle', '', , null, null, 'Place', 2),
+  ('Insense', '', , null, 'Ignite', null, 4),
+  ('Energy Drinks', '', null, 'Take drink', null, 4),
+  ('Ouija Board', '', null, null, null, null, null),
+  ('UV Flashlight', '', , null, 'Turn on / off', null, null, 2),
+  ('Photo Camera', '', , null, 'Take picture', null, 2),
+  ('Notebook', '', , null, null, 'Place', 1),
+  ('Video Camera', '', , 'Place mode: pan left', 'Infrared on / off, Place mode: pan right', 'Place mode / Place', 3),
+  ('Spirit Box', '', , null, 'Turn on / off', null, 1),
+  ('Spray Paint', '', , 'Select sigil, paint seal', 'Open seal menu', null, 2),
+  ('Tripod', '', , null, null, null, 4),
+  ('Thermometer', '', , 'Check temperature', 'Turn on / off', null, 1),
+  ('Floodlight', '', , null, null, null, 2),
+  ('Directional Microphone', '', , null, 'Turn on / off', null, 1),
+  ('Laser Grid', '', , null, null, 'Place', 2),
+  ('Book of Exile', '', , 'Open', 'Close', null, 1),
+  ('Urn', '', , null, null, 'Place', 2),
+  ('Wall Thermometer', '', , null, null, 'Place', 2),
+  ('Seal Eraser', '', , null, 'Spray', 2)

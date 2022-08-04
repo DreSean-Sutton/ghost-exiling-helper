@@ -60,10 +60,13 @@ CREATE TABLE "public.sigils" (
 
 CREATE TABLE "public.items" (
 	"item_id" serial NOT NULL,
-	"description" TEXT NOT NULL,
 	"name" TEXT NOT NULL,
-	"price" int NOT NULL,
-	"max_can_add" int NOT NULL,
+	"description" TEXT NOT NULL,
+	"price" int,
+	"primary_button" TEXT,
+	"secondary_button" TEXT,
+	"placeable" TEXT,
+	"max_can_add" int,
 	"created_at" timestamp with time zone NOT NULL,
 	CONSTRAINT "items_pk" PRIMARY KEY ("item_id")
 ) WITH (
