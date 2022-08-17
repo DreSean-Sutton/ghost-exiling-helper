@@ -41,8 +41,8 @@ VALUES
   ('Poltergeist', 'Poltergeists are exceptionally active ghosts and like playing with the objects around their victims to frighten them.'),
   ('Reiki', 'These demonic entities are hard to banish and will constantly disrupt your ritual. While in the meantime they are prone to kill.'),
   ('Revenant', 'The Revenant is one of the most dangerous ghosts. They are relatively calm if you don''t agitate them and is often difficult to identify. Once they start hunting, very little will stop him.'),
-  ('Shiryo', 'The Shiryo will do the best to show you that you don''t have long to live. They are known to be extremely aggressive.'),
-  ('Shinigami', 'The Shinigami are drawn towards death, and they''re always near places of death.');
+  ('Shinigami', 'The Shinigami are drawn towards death, and they''re always near places of death.'),
+  ('Shiryo', 'The Shiryo will do the best to show you that you don''t have long to live. They are known to be extremely aggressive.');
 
 INSERT INTO public.items (
   "name", "description", "price",
@@ -50,30 +50,56 @@ INSERT INTO public.items (
   "placeable", "max_can_add"
 )
 VALUES
-  ('EMF Detector', 'A device for measuring electromagnetic fields can indicate how strong the field is in the area of operation. Ghosts performing actions can leave electromagnetic fields.', 80, 'Turn on / off', null, null, 1),
-  ('Voice Recorder', 'A voice recorder is a communication device for the ghost. Start the recording and speak to the entity. Only a playback of the recording will determine if they are communicating in return', 95, 'Turn on / off recording', 'Turn on / off playback', null, 1),
-  ('Zonal EMF Detector', 'A device for determining in which direction the source of electromagnetic fields are located, it does not show the signal strength and only its direction relative to device. On a large area, it is very useful because of the range of action. It is effective at 100 meters.', 95, null, 'Turn on / off', null, 2),
-  ('Sound Sensor', 'A device for detecting sounds throughout the room. This will help triangulate the ghost''s patterns leading to the ghost''s location.', 90, null, null, 'place', 2),
-  ('Motion/Infrared Sensor', 'A motion detectdion device in the area of the device mounted on the wall. Will allow you to track the movements of a ghost around the house. If the device lights up orange, it means the ghost has evidence (Infrared motion sensor).', 90, null, null, 'place', 2),
-  ('Salt', 'One of the tools used to determine the ghost''s movement. Scatter piles of salt and watch for movement.', 15, null, 'Place salt pile', null, 3),
-  ('Crucifix', 'A tool in which ghost'' fear. Not all ghosts are affected by the Crucifix. Only rely on this tool as a last resort.', 70, null, null, null, 2),
-  ('Sanity Pills', 'These pills increase the Hunter''s lost sanity. Use them wisely, as they are limited.', 35, null, 'Consume pills', null, 4),
+  ('Book of Exile', 'The tool used to perform Ghost Exiles. Choose the Ritual and prepare to fight th evil lurking in the shadows.', 130, 'Open', 'Close', null, 1),
   ('Candle', 'A great source of light, and a way to determine if you''re alone. A lighter is required for this tool.', 25, null, null, 'Place', 2),
-  ('Insense', 'This is used to stun the ghost during their hunt. Light the incense in the presence of ghost''s to disorient it.', 65, null, 'Ignite', null, 4),
+  ('Crucifix', 'A tool in which ghost'' fear. Not all ghosts are affected by the Crucifix. Only rely on this tool as a last resort.', 70, null, null, null, 2),
+  ('Directional Microphone', 'A tool used to measure volume level at great distances. It is best used in large areas.', 50, null, 'Turn on / off', null, 1),
+  ('EMF Detector', 'A device for measuring electromagnetic fields can indicate how strong the field is in the area of operation. Ghosts performing actions can leave electromagnetic fields.', 80, 'Turn on / off', null, null, 1),
+
   ('Energy Drinks', 'This can temporarily increases the Hunter''s stamina, which will help you run longer. Small chance of acquiring an endurance penalty for the hunt.', 40, null, 'Take drink', null, 4),
-  ('Ouija Board', 'A device that will help you get answers from the ghost. Be careful, as it comes with a cost of sanity.', null, null, null, null, null),
-  ('UV Flashlight', 'A tool used to see traces of ectoplasm left by the ghost on the doors. Inspect the doors carefully on both sides.', 90, null, 'Turn on / off', null, null, 2),
-  ('Photo Camera', 'Often times physical evidence is required to prove the existence of these ghosts. This Photo Camera will assist in capturing images. This tool is useful for fulfilling objects in the hunt.', 80, null, 'Take picture', null, 2),
+  ('Floodlight', 'Your sanity is most vulnerable in the dark. A Floodlight will help with lighting your sanity drain. Install it in the darkest places of the house, but remember the battery is limited and will take time recharge.', 110, null, null, null, 2),
+  ('Insense', 'This is used to stun the ghost during their hunt. Light the incense in the presence of ghost''s to disorient it.', 65, null, 'Ignite', null, 4),
+  ('Laser Grid', 'With the assistance of several infrared projections, a Hunter could see outlines and silhouettes of an Entity. This is a helpful tool for gathering evidence.', 90, null, null, 'Place', 2),
+  ('Motion/Infrared Sensor', 'A motion detectdion device in the area of the device mounted on the wall. Will allow you to track the movements of a ghost around the house. If the device lights up orange, it means the ghost has evidence (Infrared motion sensor).', 90, null, null, 'place', 2),
   ('Notebook', 'Some ghosts prefer not to communicate, but can be provoked by leaving behind a Notebook in a room. Perhaps this will give the Hunter some insight as to what they are dealing with.', 80, null, null, 'Place', 1),
-  ('Video Camera', 'It''s impossible to be in several places at once, but placing Video Cameras around the house can help track Ghost Activity. These can be viewed from the Observation Tent.', 100, 'Place mode: pan left', 'Infrared on / off, Place mode: pan right', 'Place mode / Place', 3),
+  ('Ouija Board', 'A device that will help you get answers from the ghost. Be careful, as it comes with a cost of sanity.', null, null, null, null, null),
+  ('Photo Camera', 'Often times physical evidence is required to prove the existence of these ghosts. This Photo Camera will assist in capturing images. This tool is useful for fulfilling objects in the hunt.', 80, null, 'Take picture', null, 2),
+  ('Salt', 'One of the tools used to determine the ghost''s movement. Scatter piles of salt and watch for movement.', 15, null, 'Place salt pile', null, 3),
+  ('Sanity Pills', 'These pills increase the Hunter''s lost sanity. Use them wisely, as they are limited.', 35, null, 'Consume pills', null, 4),
+  ('Seal Eraser', 'A tool for destroying working seals. Spray its contents on the seal you want to destroy.', 55, null, 'Spray', 2),
   ('Spirit Box', 'Useful to attempt communication with the ghost. It quickly adjusts frequency to detect paranormal activity. Speak to the ghost and perhaps you will get a response.', 70, null, 'Turn on / off', null, 1),
   ('Spray Paint', 'It is used for drawing seals for the Ritual of Exile, protection, and increasing the activity of the ghost.', 75, 'Select sigil, paint seal', 'Open seal menu', null, 2),
-  ('Tripod', 'Tool used to elevate and provide stability to Video Cameras. This ;can protect them from being moved or thrown.', 60, null, null, null, 4),
+  ('Sound Sensor', 'A device for detecting sounds throughout the room. This will help triangulate the ghost''s patterns leading to the ghost''s location.', 90, null, null, 'place', 2),
   ('Thermometer', 'This tool is used to measure the temperature of the room.', 75, 'Check temperature', 'Turn on / off', null, 1),
-  ('Floodlight', 'Your sanity is most vulnerable in the dark. A Floodlight will help with lighting your sanity drain. Install it in the darkest places of the house, but remember the battery is limited and will take time recharge.', 110, null, null, null, 2),
-  ('Directional Microphone', 'A tool used to measure volume level at great distances. It is best used in large areas.', 50, null, 'Turn on / off', null, 1),
-  ('Laser Grid', 'With the assistance of several infrared projections, a Hunter could see outlines and silhouettes of an Entity. This is a helpful tool for gathering evidence.', 90, null, null, 'Place', 2),
-  ('Book of Exile', 'The tool used to perform Ghost Exiles. Choose the Ritual and prepare to fight th evil lurking in the shadows.', 130, 'Open', 'Close', null, 1),
+  ('Tripod', 'Tool used to elevate and provide stability to Video Cameras. This ;can protect them from being moved or thrown.', 60, null, null, null, 4),
   ('Urn', 'Set it on the ground and light it to replenish the sanity of Hunter''s in the area over the course of a few seconds. It is also used in the ritual of honoring the good part of the ghost''s soul.', 80, null, null, 'Place', 2),
+  ('UV Flashlight', 'A tool used to see traces of ectoplasm left by the ghost on the doors. Inspect the doors carefully on both sides.', 90, null, 'Turn on / off', null, null, 2),
+  ('Video Camera', 'It''s impossible to be in several places at once, but placing Video Cameras around the house can help track Ghost Activity. These can be viewed from the Observation Tent.', 100, 'Place mode: pan left', 'Infrared on / off, Place mode: pan right', 'Place mode / Place', 3),
+  ('Voice Recorder', 'A voice recorder is a communication device for the ghost. Start the recording and speak to the entity. Only a playback of the recording will determine if they are communicating in return', 95, 'Turn on / off recording', 'Turn on / off playback', null, 1),
   ('Wall Thermometer', 'A stationary device for measuring the temperature of a room. Place it in any roomand every few seconds the device will take a temperature measurement. If it''s negative, then the device will sound an alarm.', 100, null, null, 'Place', 2),
-  ('Seal Eraser', 'A tool for destroying working seals. Spray its contents on the seal you want to destroy.', 55, null, 'Spray', 2);
+  ('Zonal EMF Detector', 'A device for determining in which direction the source of electromagnetic fields are located, it does not show the signal strength and only its direction relative to device. On a large area, it is very useful because of the range of action. It is effective at 100 meters.', 95, null, 'Turn on / off', null, 2);
+
+INSERT INTO public.evidence (
+  "ghost_id", "evidence_1", "evidence_2", "evidence_3"
+)
+VALUES
+  (1, "Freezing Temperature", "Haze", "Laser Projection"),
+  (2, "Ghost Orb", "Haze", "Spirit Box"),
+  (3, "Ghost Orb", "Infrared Motion Sensor", "Voice Recorder Response"),
+  (4, "EMF Level 5", "Ghost Writing", "Freezing Temperature"),
+  (5, "Haze", "Infrared Motion Sensor", "Laser Projection"),
+  (6, "EMF Level 5", "Ghost Writing", "Haze"),
+  (7, "Infrared Motion Sensor", "Traces of Ectoplasm", "Voice Recorder Response"),
+  (8, "Freezing Temperature", "Laser Projection", "Voice Recorder Response"),
+  (9, "EMF Level 5", "Spirit Box Response", "Voice Recorder Response"),
+  (10, "EMF Level 5", "Freezing Temperature", "Voice Recorder Response"),
+  (11, "Ghost Writing", "Infrared Motion Sensor", "Traces of Ectoplasm"),
+  (12, "Haze", "Infrared Motion Sensor", "Spirit Box Response"),
+  (13, "EMF Level 5", "Ghost Writing", "Laser Projection"),
+  (14, "Ghost Orb", "Ghost Writing", "Traces of Ectoplasm"),
+  (15, "Ghost Orb", "Ghost Writing", "Laser Projection"),
+  (16, "Freezing Temperature", "Ghost Writing", "Haze"),
+  (17, "EMF Level 5", "Laser Projection", "Traces of Ectoplasm"),
+  (18, "Ghost Orb", "Traces Ectoplasm", "Voice Recorder Response"),
+  (19, "Laser Projection", "Spirit Box Response", "Voice Recorder Response"),
+  (20, "EMF Level 5", "Spirit Box Response", "Traces of Ectoplasm");

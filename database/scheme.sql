@@ -19,9 +19,9 @@ CREATE TABLE "public.ghosts" (
 
 CREATE TABLE "public.evidence" (
 	"ghost_id" int NOT NULL,
-	"evidence_id_1" int NOT NULL,
-	"evidence_id_2" int NOT NULL,
-	"evidence_id_3" int,
+	"evidence_1" int NOT NULL,
+	"evidence_2" int NOT NULL,
+	"evidence_3" int,
 	"created_at" timestamp with time zone NOT NULL
 ) WITH (
   OIDS=FALSE
